@@ -11,7 +11,7 @@
     
     @include('partials.navbar')
 
-    <main class="bg-black w-full">
+    <main>
         @yield('body')
     </main>
     
