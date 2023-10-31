@@ -1,3 +1,16 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: Inter;
+    src: url(/public/fonts/Inter-Regular.woff2);
+}
+
+* {
+    font-family: Inter;
+}
+
+.navItemHover:hover {
+    text-decoration: underline;
+}
