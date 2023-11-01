@@ -42,16 +42,20 @@ $navProps = [
 
 ?>
 
-<nav class="fixed w-full top-0 left-0 bg-mc text-sc">
+{{-- CONTAINER --}}
+<nav class="w-full bg-mc py-4">
 
-    <div class="px-5 py-8 mx-auto flex items-center justify-between max-w-screen-xl">
+    {{-- WRAPPER + MAIN COMPONENT --}}
+    <div id="navComponent" class="px-5 py-4 bg-mc mx-auto text-sc flex items-center justify-between max-w-screen-xl">
 
+        {{-- BRAND --}}
         <span class="font-[InterBold] text-[27px] relative">
             Spanty
             <span class="font-light absolute -right-4 text-[20px]">&reg;</span>
         </span>
 
-        <div class="flex items-center gap-[60px] font-medium">
+        {{-- LINK --}}
+        <div class="hidden md:flex items-center gap-[60px] font-medium">
             @foreach ($navProps['link'] as $np)
 
                 <div class="relative [&_.moretab]:hover:flex inline-block flex items-center gap-1 [&>a]:hover:opacity-75 [&_svg]:hover:opacity-75 transition-opacity cursor-pointer">
@@ -74,10 +78,34 @@ $navProps = [
             @endforeach
         </div>
 
+        {{-- CTA --}}
         @if ($navProps['CTA'] ?? false)
-            <a class="px-8 py-4 bg-sc text-bc font-semibold text-sm hover:bg-bc hover:text-sc transition-colors" href="{{ $navProps['CTA']['redirect'] }}">{{ $navProps['CTA']['text'] }}</a>
+            <a class="hidden md:block whitespace-nowrap px-8 py-4 bg-sc text-bc font-semibold text-sm hover:bg-bc hover:text-sc transition-colors" href="{{ $navProps['CTA']['redirect'] }}">{{ $navProps['CTA']['text'] }}</a>
         @endif
+
+        <div class="md:hidden">
+            <button>
+                <span class="iconify text-[32px]" data-icon="ion:menu"></span>
+            </button>
+        </div>
 
     </div>
 
 </nav>
+
+<div id="navFixed" class="fixed bg-mc shadow-lg -translate-y-full top-0 left-0 w-full z-50 transition-transform duration-300"></div>
+
+{{-- SCRIPT for Clone NavComponent to Fixed Container && add scroll event --}}
+<script>
+var navComponent = document.getElementById("navComponent");
+var navFixed = document.getElementById("navFixed");
+var clonedNavComponent = navComponent.cloneNode(true)
+navFixed.appendChild(clonedNavComponent)
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+        navFixed.classList.replace('-translate-y-full', 'translate-y-0')
+    } else {
+        navFixed.classList.replace('translate-y-0', '-translate-y-full')
+    }
+})
+</script>
