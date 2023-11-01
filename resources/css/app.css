@@ -7,6 +7,11 @@
     src: url(/public/fonts/Inter-Regular.woff2);
 }
 
+@font-face {
+    font-family: InterBold;
+    src: url(/public/fonts/Inter-Bold.woff2);
+}
+
 * {
     font-family: Inter;
 }

@@ -46,9 +46,9 @@ $navProps = [
 
     <div class="px-5 py-8 mx-auto flex items-center justify-between max-w-screen-xl">
 
-        <span class="font-bold text-[27px] relative">
+        <span class="font-[InterBold] text-[27px] relative">
             Spanty
-            <span class="font-normal absolute -right-5">&reg;</span>
+            <span class="font-light absolute -right-4 text-[20px]">&reg;</span>
         </span>
 
         <div class="flex items-center gap-[60px] font-medium">
@@ -75,7 +75,7 @@ $navProps = [
         </div>
 
         @if ($navProps['CTA'] ?? false)
-            <a class="px-8 py-4 bg-sc text-bc font-medium text-sm hover:bg-bc hover:text-sc transition-colors" href="{{ $navProps['CTA']['redirect'] }}">{{ $navProps['CTA']['text'] }}</a>
+            <a class="px-8 py-4 bg-sc text-bc font-semibold text-sm hover:bg-bc hover:text-sc transition-colors" href="{{ $navProps['CTA']['redirect'] }}">{{ $navProps['CTA']['text'] }}</a>
         @endif
 
     </div>
