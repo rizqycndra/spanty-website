@@ -16,6 +16,10 @@
     font-family: Inter;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .navItemHover:hover {
     text-decoration: underline;
 }

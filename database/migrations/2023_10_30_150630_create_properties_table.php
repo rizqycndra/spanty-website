@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('price');
             $table->string('location', 60);
             $table->boolean('status');
+            $table->json('feature');
             $table->timestamps();
         });
     }
