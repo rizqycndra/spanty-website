@@ -64,7 +64,7 @@ $navProps = [
 
                     @if ($np['more'] ?? false)
                         <span class="iconify" data-icon="icon-park-outline:down"></span>
-                        <div class="top-full absolute pt-3">
+                        <div class="top-full absolute pt-3 z-10">
                             <div class="moretab hidden bg-sc text-bc flex flex-col gap-4 px-5 py-4 shadow-md">
                                 @foreach ($np['more'] as $npi)
                                     <a class="whitespace-nowrap hover:opacity-75 transition-opacity" href="{{ $npi['redirect'] }}">{{ $npi['name'] }}</a>
@@ -101,11 +101,18 @@ var navComponent = document.getElementById("navComponent");
 var navFixed = document.getElementById("navFixed");
 var clonedNavComponent = navComponent.cloneNode(true)
 navFixed.appendChild(clonedNavComponent)
+var currentScroll = 0
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 80) {
-        navFixed.classList.replace('-translate-y-full', 'translate-y-0')
+
+    var scroll = window.scrollY
+
+    if (scroll < currentScroll && scroll > 80) {
+        navFixed.style.transform = `translateY(0)`
     } else {
-        navFixed.classList.replace('translate-y-0', '-translate-y-full')
+        navFixed.style.transform = `translateY(-100%)`
     }
+
+    currentScroll = scroll < currentScroll || scroll > currentScroll + 120 ? scroll : currentScroll
+
 })
 </script>

@@ -22,7 +22,7 @@ $statsData = [
 ?>
 
 {{-- CONTAINER --}}
-<div class="max-w-screen-xl mx-auto my-5 md:my-10 px-[20px] lg:items-center md:px-20 flex flex-col lg:flex-row gap-10 md:gap-16 [&>*]:w-full">
+<div class="max-w-screen-xl mx-auto my-5 md:my-16 px-[20px] lg:items-center md:px-5 flex flex-col lg:flex-row gap-10 md:gap-16 [&>*]:w-full">
 
     {{-- STATISTIC --}}
     <div class="grid grid-cols-2 gap-10">
