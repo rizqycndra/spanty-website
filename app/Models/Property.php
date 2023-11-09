@@ -32,7 +32,7 @@ class Property extends Model
         foreach ($data as $d) {
             $dump = $d;
             $dumpIcon = [];
-            foreach ($d->feature as $name => $value) {
+            foreach ($d->feature && is_array(($d->feature)) ? $d->feature : [] as $name => $value) {
                 $dumpIcon[] = [
                     'name'  => $name,
                     'value' => $value,
