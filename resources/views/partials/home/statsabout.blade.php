@@ -1,26 +1,3 @@
-<?php
-
-$statsData = [
-    [
-        "top"   => "9",
-        "text"  => "Years experience in real estate"
-    ],
-    [
-        "top"   => "$23K",
-        "text"  => "Total Net Profit Every Month"
-    ],
-    [
-        "top"   => "17",
-        "text"  => "Every month a new happy customer"
-    ],
-    [
-        "top"   => "$4K-7K",
-        "text"  => "Approximate Profit In 20 Business Days"
-    ]
-];
-
-?>
-
 {{-- CONTAINER --}}
 <div class="max-w-screen-xl mx-auto my-5 md:my-16 px-[20px] lg:items-center md:px-5 flex flex-col lg:flex-row gap-10 md:gap-16 [&>*]:w-full">
 

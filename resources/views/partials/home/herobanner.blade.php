@@ -1,22 +1,3 @@
-<?php
-
-$heroBanner = [
-    "mainheading"   => "Creative Real Estate Agency",
-    "description"   => "Spanty is an international estate company that offers services like propery appraisal as well as the sale, purchase, and investment of real estate.",
-    "service"       => [
-        [
-            "icon"  => "eva:pricetags-outline",
-            "text"  => "The price we offer accordance with the quality we provide"
-        ],
-        [
-            "icon"  => "ph:gift",
-            "text"  => "Official legality in the relevant government"
-        ],
-    ]
-];
-
-?>
-
 {{-- CONTAINER --}}
 <div class="bg-mc overflow-hidden">
 

@@ -1,25 +1,3 @@
-<?php
-
-$mSearchForm = [
-    [
-        "icon"  => "mingcute:location-2-line",
-        "title" => "Location",
-        "value" => "California, US"
-    ],
-    [
-        "icon"  => "mingcute:currency-dollar-line",
-        "title" => "Price",
-        "value" => "$1500-$2500"
-    ],
-    [
-        "icon"  => "bx:layer",
-        "title" => "Type of Property",
-        "value" => "Apartment"
-    ],
-]
-
-?>
-
 {{-- CONTAINER --}}
 <div class="bg-sc min-w-[240px] p-[22px] w-full flex flex-col gap-[35px] hover:bg-bc3 hover:shadow-2xl transition-all cursor-pointer">
 
