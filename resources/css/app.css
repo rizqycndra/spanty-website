@@ -23,3 +23,7 @@ html {
 .navItemHover:hover {
     text-decoration: underline;
 }
+
+input, textarea {
+    outline: none;
+}
